@@ -7,11 +7,6 @@ import { getLanguageService } from 'vscode-html-languageservice';
 
 const ID = 'vscode-html';
 
-const parserSettingsConfiguration = {
-  fields : [],
-};
-
-
 export default {
   ...defaultParserInterface,
 
@@ -22,8 +17,7 @@ export default {
   locationProps: new Set(['start', 'end']),
 
   loadParser(callback) {
-    const htmlLS = getLanguageService();
-    callback(htmlLS);
+    callback(getLanguageService());
   },
 
   parse(htmlLS, code) {
@@ -58,7 +52,6 @@ export default {
   renderSettings(parserSettings, onChange) {
     return (
       <SettingsRenderer
-        settingsConfiguration={parserSettingsConfiguration}
         parserSettings={{...parserSettings}}
         onChange={onChange}
       />
