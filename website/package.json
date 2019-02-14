@@ -129,6 +129,7 @@
     "typescript": "^3.2.2",
     "typescript-eslint-parser": "^21.0.1",
     "uglify-es": "^3.0.28",
+    "vue-eslint-parser": "^6.0.2",
     "webidl2": "^8.1.0",
     "yaml": "^1.0.3",
     "yaml-ast-parser": "^0.0.39"
