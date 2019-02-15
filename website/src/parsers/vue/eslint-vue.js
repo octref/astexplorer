@@ -28,6 +28,10 @@ export default {
     if (!range) return;
     return range;
   },
+  
+  getNodeName(node) {
+    return node.type
+  },
 
   _ignoredProperties: new Set(['loc', 'start', 'end', 'range', 'parent', 'rawName', 'namespace', 'type', 'tokens', 'comments', 'errors']),
 };
